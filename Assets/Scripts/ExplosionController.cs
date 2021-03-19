@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ExplosionController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        StartCoroutine(Explode());
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator Explode()
     {
-        
+        yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(false);
     }
 }

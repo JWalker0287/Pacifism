@@ -7,7 +7,6 @@ public class GateSpawner : MonoBehaviour
     public GateController prefab;
     GateController[] pool;
     public int poolSize = 100;
-    public int spawnCount = 3;
     public float spawnInterval = 3;
     public Bounds range = new Bounds(Vector3.zero, new Vector3(50,0,50));
     IEnumerator Start()
@@ -44,11 +43,16 @@ public class GateSpawner : MonoBehaviour
         if (gate == null) return;
 
         Vector3 rand =  new Vector3(
-            Random.Range(-range.size.x, range.size.x),
+            Random.Range(-range.extents.x, range.extents.x),
             0,
-            Random.Range(-range.size.z, range.size.z)
+            Random.Range(-range.extents.z, range.extents.z)
         );
         gate.transform.position = transform.position + rand;
         gate.gameObject.SetActive(true);
+    }
+    void OnDrawGizmos ()
+    {
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(range.center, range.size);
     }
 }
