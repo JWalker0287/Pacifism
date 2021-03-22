@@ -48,6 +48,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < spawnCount; i ++)
         {
             EnemyController enemy = SpawnEnemy();
+            if (enemy == null) return;
             Vector3 rand =  Random.insideUnitSphere * 5;
             rand.y = 0;
             enemy.transform.position = t.position + rand;

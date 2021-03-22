@@ -8,7 +8,7 @@ public class ExplosionSpawner : MonoBehaviour
     public ExplosionController prefab;
     ExplosionController[] pool;
     public int poolSize = 10;
-    void Start()
+    void Awake()
     {
         if (spawner == null) spawner = this;
         FillPool();

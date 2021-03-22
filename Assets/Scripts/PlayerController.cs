@@ -5,9 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterMotor))]
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController player;
     CharacterMotor motor;
     void Awake()
     {
+        player = this;
         motor = GetComponent<CharacterMotor>();
     }
     void Update()
