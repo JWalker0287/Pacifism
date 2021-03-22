@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: -8358969581710521267}
   - component: {fileID: -1855307636328361580}
   - component: {fileID: 5492574426554511529}
+  - component: {fileID: 1700627006129327764}
   m_Layer: 10
   m_Name: Multiplier
   m_TagString: Untagged
@@ -175,6 +176,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDist: 4
+  timeBeforeDisable: 5
+--- !u!95 &1700627006129327764
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329595639308190821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2593b3409e0fc114485706f4dd3a5e72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3257756467688459625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,6 +210,10 @@ PrefabInstance:
     - target: {fileID: 5624989781439860351, guid: cdd0e7856ee19c54fba1cdc0ddf6fd41, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624989781439860351, guid: cdd0e7856ee19c54fba1cdc0ddf6fd41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6615244061213110889, guid: cdd0e7856ee19c54fba1cdc0ddf6fd41, type: 3}
       propertyPath: m_RootOrder
