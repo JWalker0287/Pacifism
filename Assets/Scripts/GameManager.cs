@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     }
     public static void ScorePoints(Vector3 pos)
     {
-        game.points += 25 * game.multiplier;
+        int points = 26 * game.multiplier;
+        game.points += points;
+        TextSpawner.Spawn(points.ToString(), pos);
         game.UpdateScoreUI();
     }
 
