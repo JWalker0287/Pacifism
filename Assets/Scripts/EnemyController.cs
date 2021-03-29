@@ -27,5 +27,17 @@ public class EnemyController : MonoBehaviour
         GameManager.ScorePoints(transform.position);
 
     }
+    void OnEnable()
+    {
+        StartCoroutine(SpawningIn());
+        GetComponent<Animator>().Play("EnemySpawn");
+    }
+
+    IEnumerator SpawningIn ()
+    {
+        motor.enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        motor.enabled = true;
+    }
 }
     

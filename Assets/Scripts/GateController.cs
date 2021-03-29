@@ -13,11 +13,17 @@ public class GateController : MonoBehaviour
         v.y=0;
         body.velocity = v;
         body.angularVelocity = Vector3.up * Random.Range(-0.5f, 0.5f);
+
+        GetComponent<Animator>().Play("GateSpawn");
     }
     void OnTriggerEnter(Collider c)
     {
+        PlayerController p = c.gameObject.GetComponent<PlayerController>();
+        if (p == null) return;
+
         ExplosionSpawner.SpawnExplosion(left.position);
         ExplosionSpawner.SpawnExplosion(right.position);
+        AudioManager.Play("Explosion");
         gameObject.SetActive(false);
     }
     void OnCollisionEnter(Collision c)

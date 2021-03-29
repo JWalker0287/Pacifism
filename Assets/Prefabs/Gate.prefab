@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7026257987545392738}
   - component: {fileID: 3458664318527262189}
   - component: {fileID: 328765386635289446}
+  - component: {fileID: 1645298266964843506}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1931110977510660649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.067, y: 0, z: 0}
-  m_LocalScale: {x: 0.70029, y: 0.70029, z: 0.70029}
+  m_LocalScale: {x: 0.5713386, y: 0.5713386, z: 0.5713386}
   m_Children: []
   m_Father: {fileID: 8866465817666982733}
   m_RootOrder: 1
@@ -95,6 +96,68 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!108 &1645298266964843506
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931110977510660649}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.17610055, b: 1, a: 1}
+  m_Intensity: 52.2
+  m_Range: 0.86
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &3394971553238503813
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +206,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394971553238503813}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -202,6 +265,7 @@ GameObject:
   - component: {fileID: 3263623782966251131}
   - component: {fileID: 1538509637507246031}
   - component: {fileID: 6040458264118154078}
+  - component: {fileID: 5029955935490639095}
   m_Layer: 8
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -218,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 5070125740875334908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.067, y: 0, z: 0}
-  m_LocalScale: {x: 0.70029, y: 0.70029, z: 0.70029}
+  m_LocalScale: {x: 0.5713386, y: 0.5713386, z: 0.5713386}
   m_Children: []
   m_Father: {fileID: 8866465817666982733}
   m_RootOrder: 2
@@ -285,6 +349,68 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!108 &5029955935490639095
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070125740875334908}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.17610055, b: 1, a: 1}
+  m_Intensity: 36.3
+  m_Range: 0.86
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &7799439296248458903
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +422,7 @@ GameObject:
   - component: {fileID: 8866465817666982733}
   - component: {fileID: 5076356175994528068}
   - component: {fileID: 4938707581402547911}
+  - component: {fileID: 575501295726860694}
   m_Layer: 8
   m_Name: Gate
   m_TagString: Untagged
@@ -351,6 +478,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: {fileID: 5132950284658071988}
   right: {fileID: 2555741592767302251}
+--- !u!95 &575501295726860694
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799439296248458903}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08455556bc2d5034094dfb45b9a3e1f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2476412277600286463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2060890401411018877, guid: 431a0e605f55be74a96e1afe795f7f02, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00000016391277
+      value: -0.0000001639128
       objectReference: {fileID: 0}
     - target: {fileID: 2060890401411018877, guid: 431a0e605f55be74a96e1afe795f7f02, type: 3}
       propertyPath: m_LocalRotation.w

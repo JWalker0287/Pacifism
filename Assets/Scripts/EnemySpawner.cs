@@ -54,5 +54,6 @@ public class EnemySpawner : MonoBehaviour
             enemy.transform.position = t.position + rand;
             enemy.gameObject.SetActive(true);
         }
+        
     }
 }

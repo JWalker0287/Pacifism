@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Text pointsText;
     public Text multiplierText;
     public Text highScoreText;
+    public bool started = false;
 
     void Awake()
     {

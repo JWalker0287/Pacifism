@@ -41,6 +41,7 @@ public class MultiplierController : MonoBehaviour
     {
         PlayerController player = c.GetComponentInParent<PlayerController>();
         if (player == null) return;
+        AudioManager.Play("Pickup_coin 11 (1)");
         gameObject.SetActive(false);
         GameManager.AddMultiplier(transform.position);
     }

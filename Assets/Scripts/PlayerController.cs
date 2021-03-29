@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     {
         player = this;
         motor = GetComponent<CharacterMotor>();
+        GetComponent<Animator>().Play("PlayerStart");
     }
     void Update()
     {
