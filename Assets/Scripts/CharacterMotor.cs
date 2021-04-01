@@ -6,6 +6,7 @@ using UnityEngine;
 public class CharacterMotor : MonoBehaviour
 {
     public Vector3 dir;
+    public Vector3 lookDir;
     public float speed = 10;
     public float turnSpeed = 20;
     public float maxVelocityChange = 1;
@@ -16,8 +17,14 @@ public class CharacterMotor : MonoBehaviour
     }
     void Update()
     {
-        
-        if (body.velocity.sqrMagnitude > 0.1f)
+        if (lookDir.magnitude > 0.25f)
+        {
+            transform.forward = Vector3.Lerp(
+                transform.forward, 
+                lookDir, 
+                Time.deltaTime * turnSpeed);
+        }
+        else if (body.velocity.sqrMagnitude > 0.1f)
         {
             transform.forward = Vector3.Lerp(
                 transform.forward, 
