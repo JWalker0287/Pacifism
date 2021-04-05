@@ -41,14 +41,16 @@ public class PlayerController : MonoBehaviour
         float z = Input.GetAxisRaw(yAxisRight);
         motor.lookDir = new Vector3(x,0,z);
 
-        if (Time.time - lastFire > fireDelay && motor.lookDir.sqrMagnitude> 0.25f)
+        float dot = Vector3.Dot(motor.lookDir, transform.forward);
+
+        if (dot > 0.9f && Time.time - lastFire > fireDelay && motor.lookDir.sqrMagnitude> 0.25f)
         { 
             bullets.Fire(gun.position, gun.forward * bulletSpeed);
             lastFire = Time.time;
         }
     }
 
-    void OnCollisionEnter(Collision c)
+    public void Death()
     {
         SceneManager.LoadScene("MainMenu");
     }

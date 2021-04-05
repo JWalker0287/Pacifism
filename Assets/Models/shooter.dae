@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.91.2 commit date:2021-01-19, commit time:16:15, hash:5be9ef417703</authoring_tool>
+    </contributor>
+    <created>2021-04-05T00:58:42</created>
+    <modified>2021-04-05T00:58:42</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Shooter-effect">
+      <profile_COMMON>
+        <newparam sid="Shooter-surface">
+          <surface type="2D">
+            <init_from>Shooter</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Shooter-sampler">
+          <sampler2D>
+            <source>Shooter-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Shooter-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Shooter" name="Shooter">
+      <init_from>Shooter.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Shooter-material" name="Shooter">
+      <instance_effect url="#Shooter-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Cone_001-mesh" name="Cone.001">
+      <mesh>
+        <source id="Cone_001-mesh-positions">
+          <float_array id="Cone_001-mesh-positions-array" count="33">0.8660254 -0.7543283 0.2634689 0.3722536 1.125485 -0.03535431 1.251615 -0.4315624 0 0.3158833 1.279846 0.207006 0 1 0 -0.8660254 -0.7543283 0.2634689 -0.3722536 1.125485 -0.03535431 0 -0.3947741 0.5 0 -0.9398123 0 -1.251615 -0.4315624 0 -0.3158833 1.279846 0.207006</float_array>
+          <technique_common>
+            <accessor source="#Cone_001-mesh-positions-array" count="11" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cone_001-mesh-normals">
+          <float_array id="Cone_001-mesh-normals-array" count="54">0.3691501 0.3136189 0.8748551 -0.0791496 -0.6738843 0.7345852 -0.3117908 0.7668874 -0.5609549 -0.34946 -0.3055329 -0.8857355 0.2910565 0 -0.9567059 0.4685037 0.1508689 0.8704844 -0.4782415 -0.1051384 0.8719123 -0.07300865 -0.0638315 -0.9952865 0.8666374 0.4869782 -0.1085901 -0.3691501 0.3136189 0.8748551 0.0791496 -0.6738843 0.7345852 0.3117908 0.7668874 -0.5609549 0.34946 -0.3055329 -0.8857355 -0.2910565 0 -0.9567059 -0.4685037 0.1508689 0.8704844 0.4782415 -0.1051384 0.8719123 0.07300865 -0.0638315 -0.9952865 -0.8666374 0.4869782 -0.1085901</float_array>
+          <technique_common>
+            <accessor source="#Cone_001-mesh-normals-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cone_001-mesh-map-0">
+          <float_array id="Cone_001-mesh-map-0-array" count="108">0.6417351 0.195374 0.5027701 0.0189799 0.9590941 0.06249815 0.5027701 0.0189799 0.6417351 0.195374 0.4738484 0.2315838 0.2477045 0.4393466 0.1881482 0.484075 0.1352071 0.3988545 0.08373624 0.9752396 0.08842158 0.4731284 0.223159 0.9376624 0.4738484 0.2315838 0.04879957 0.08251172 0.5027701 0.0189799 0.223159 0.9376624 0.2477045 0.4393466 0.3654114 0.9624616 0.3654113 0.4603283 0.3654114 0.9624616 0.2477045 0.4393466 0.223159 0.9376624 0.08842158 0.4731284 0.1881482 0.484075 0.223159 0.9376624 0.1881482 0.484075 0.2477045 0.4393466 0.6417351 0.195374 0.9590941 0.06249815 0.669903 0.4181579 0.5878312 0.413366 0.4738484 0.2315838 0.6417351 0.195374 0.7856529 0.4356131 0.8981501 0.3951207 0.8452093 0.4803414 0.9496214 0.9715058 0.8101986 0.9339287 0.9449358 0.4693948 0.4738484 0.2315838 0.3636407 0.4156792 0.04879957 0.08251172 0.8101986 0.9339287 0.6679461 0.9587278 0.7856529 0.4356131 0.6679461 0.4565948 0.7856529 0.4356131 0.6679461 0.9587278 0.8101986 0.9339287 0.8452093 0.4803414 0.9449358 0.4693948 0.8101986 0.9339287 0.7856529 0.4356131 0.8452093 0.4803414</float_array>
+          <technique_common>
+            <accessor source="#Cone_001-mesh-map-0-array" count="54" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cone_001-mesh-vertices">
+          <input semantic="POSITION" source="#Cone_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Shooter-material" count="18">
+          <input semantic="VERTEX" source="#Cone_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cone_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cone_001-mesh-map-0" offset="2" set="0"/>
+          <p>7 0 0 0 0 1 4 0 2 0 1 3 7 1 4 8 1 5 3 2 6 1 2 7 4 2 8 0 3 9 4 3 10 2 3 11 8 4 12 4 4 13 0 4 14 2 5 15 3 5 16 0 5 17 4 6 18 0 6 19 3 6 20 2 7 21 4 7 22 1 7 23 2 8 24 1 8 25 3 8 26 7 9 27 4 9 28 5 9 29 5 10 30 8 10 31 7 10 32 10 11 33 4 11 34 6 11 35 5 12 36 9 12 37 4 12 38 8 13 39 5 13 40 4 13 41 9 14 42 5 14 43 10 14 44 4 15 45 10 15 46 5 15 47 9 16 48 6 16 49 4 16 50 9 17 51 10 17 52 6 17 53</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Cone" name="Cone" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Cone_001-mesh" name="Cone">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Shooter-material" target="#Shooter-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

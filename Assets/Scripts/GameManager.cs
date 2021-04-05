@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager game;
+    public string gameName = "Pacifism";
     public int points;
     public int multiplier;
     public Text pointsText;

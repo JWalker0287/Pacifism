@@ -11,10 +11,12 @@ public class CharacterMotor : MonoBehaviour
     public float turnSpeed = 20;
     public float maxVelocityChange = 1;
     Rigidbody body;
+
     void Awake()
     {
         body = GetComponent<Rigidbody>();
     }
+
     void Update()
     {
         if (lookDir.magnitude > 0.25f)
@@ -33,6 +35,7 @@ public class CharacterMotor : MonoBehaviour
             );
         }
     }
+    
     void FixedUpdate ()
     {
         Vector3 velocityChange = dir * speed - body.velocity;

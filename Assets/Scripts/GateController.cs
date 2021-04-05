@@ -28,6 +28,10 @@ public class GateController : MonoBehaviour
     }
     void OnCollisionEnter(Collision c)
     {
-        Debug.Log("Game Over");
+        PlayerController p = c.gameObject.GetComponent<PlayerController>();
+        if (p == null) return;
+
+        PlayerController.player.Death();
+
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class ProjectileSpawner : MonoBehaviour
 {
     public Rigidbody prefab;
-    Rigidbody[] pool;
-    public int poolSize = 1000;
+    List<Rigidbody> pool = new List<Rigidbody>();
+    public int poolSize = 100;
 
     void Awake ()
     {
@@ -15,32 +15,28 @@ public class ProjectileSpawner : MonoBehaviour
 
     void FillPool()
     {
-        pool = new Rigidbody[poolSize];
         for(int i = 0; i < poolSize; i ++)
         {
             Rigidbody bullet = Instantiate<Rigidbody>(prefab);
-            pool[i] = bullet;
+            pool.Add(bullet);
             bullet.gameObject.SetActive(false);
+            bullet.transform.SetParent(transform);
         }
     }
 
     public void Fire (Vector3 pos, Vector3 velocity)
     {
-        Rigidbody projectile = null;
-        for(int i = 0; i < poolSize; i ++)
+        Rigidbody projectile = pool.Find((r) => !r.gameObject.activeSelf);
+        
+        if (projectile == null) 
         {
-            Rigidbody p = pool[i];
-            if (!p.gameObject.activeSelf)
-            {
-                projectile = p;
-                break;
-            }
+            projectile = Instantiate<Rigidbody>(prefab);
+            pool.Add(projectile);
+            projectile.transform.SetParent(transform);
         }
 
-        if (projectile == null) return;
-
+        projectile.transform.position = pos;
         projectile.gameObject.SetActive(true);
-        projectile.position = pos;
         projectile.velocity = velocity;
     }
 }

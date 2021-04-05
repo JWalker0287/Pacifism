@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public EnemyController prefab;
-    EnemyController[] pool;
+    public GameObject prefab;
+    GameObject[] pool;
     public int poolSize = 100;
     public int spawnCount = 3;
     public float spawnInterval = 3;
@@ -21,20 +21,20 @@ public class EnemySpawner : MonoBehaviour
     }
     void FillPool ()
     {
-        pool = new EnemyController[poolSize];
+        pool = new GameObject[poolSize];
         for (int i = 0; i < poolSize; i ++)
         {
-            EnemyController enemy = Instantiate<EnemyController>(prefab);
+            GameObject enemy = Instantiate<GameObject>(prefab);
             pool[i] = enemy;
             enemy.gameObject.SetActive(false);
             enemy.transform.SetParent(transform);
         }
     }
-    EnemyController SpawnEnemy ()
+    GameObject SpawnEnemy ()
     {
         for (int i = 0;i < poolSize;i ++)
         {
-            EnemyController enemy = pool[i];
+            GameObject enemy = pool[i];
             if (!enemy.gameObject.activeSelf)
             {
                 return enemy;
@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
         Transform t = spawnPoints[Random.Range(0,spawnPoints.Length)];
         for (int i = 0; i < spawnCount; i ++)
         {
-            EnemyController enemy = SpawnEnemy();
+            GameObject enemy = SpawnEnemy();
             if (enemy == null) return;
             Vector3 rand =  Random.insideUnitSphere * 5;
             rand.y = 0;
