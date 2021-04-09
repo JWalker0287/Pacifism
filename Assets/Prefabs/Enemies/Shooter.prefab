@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 8737485840648556983}
   - component: {fileID: 2332656005131861555}
   - component: {fileID: 1575766846477307738}
+  - component: {fileID: 3337594586979784144}
   m_Layer: 7
   m_Name: Shooter
   m_TagString: Untagged
@@ -309,8 +310,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddc5385f50bb11499371f57f12a5db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnAnimName: ShooterSpawn
   shotDist: 28
   chaseDist: 5
+  gun: {fileID: 3338396527752803275}
+--- !u!114 &3337594586979784144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737485840648556976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eee038185dfc67459aae7f14d030061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
 --- !u!1001 &3194780591723547200
 PrefabInstance:
   m_ObjectHideFlags: 0

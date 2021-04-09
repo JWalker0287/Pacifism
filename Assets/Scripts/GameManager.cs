@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,10 +14,13 @@ public class GameManager : MonoBehaviour
     public Text multiplierText;
     public Text highScoreText;
     public bool started = false;
+    public bool gameOver = false;
+    public GameObject pauseMenu;
 
     void Awake()
     {
         game = this;
+        pauseMenu.SetActive(false);
         UpdateScoreUI();
     }
     public static void ScorePoints(Vector3 pos)
@@ -32,6 +36,14 @@ public class GameManager : MonoBehaviour
         game.multiplier ++;
         game.UpdateScoreUI();
     }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            PauseResume();
+        }
+    }
     void UpdateScoreUI()
     {
         multiplierText.text = "x" + multiplier.ToString();
@@ -44,5 +56,44 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", highScore);
         }
         highScoreText.text = "HI: " + highScore.ToString();
+    }
+    public static void Death()
+    {
+        if (game.gameOver) return;
+        game.StartCoroutine(game.DeathCoroutine());
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        PlayerController.player.playerVisuals.SetActive(false);
+        Time.timeScale = 0.5f;
+        Time.fixedDeltaTime = 0.04f;
+        yield return new WaitForSeconds(1.5f);
+        Time.timeScale = 1;
+        Time.fixedDeltaTime = 0.02f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void PauseResume()
+    {
+        if (pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+    public void Quit()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void FullQuit()
+    {
+        Application.Quit();
     }
 }

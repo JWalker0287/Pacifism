@@ -5,21 +5,23 @@ using UnityEngine;
 public class ShooterController : MonoBehaviour
 {
     public static ProjectileSpawner bullets;
+    public string spawnAnimName = "ShooterSpawn";
     public float shotDist = 28;
     public float chaseDist = 10;
+    float chaseDistSq;
     CharacterMotor motor;
-    GunController gun;
+    public GunController gun;
     Animator anim;
 
     void Start()
     {
+        chaseDistSq = chaseDist * chaseDist;
         motor = GetComponent<CharacterMotor>();
-        gun = GetComponentInChildren<GunController>();
+        //gun = GetComponentInChildren<GunController>();
         //if (bullets = null)
-       // {
+        //{
             GameObject g = GameObject.Find("EnemyBullets");
             bullets = g.GetComponent<ProjectileSpawner>();
-            Debug.Log("I Made It");
         //}
         gun.bullets = bullets;
     }
@@ -27,15 +29,14 @@ public class ShooterController : MonoBehaviour
     void OnEnable()
     {
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-        //GetComponent<Animator>().Play("ShooterSpawn");
+        GetComponent<Animator>().Play(spawnAnimName);
     }
 
     void Update()
     {
         Vector3 diff = PlayerController.player.transform.position - transform.position;
         float distSq = diff.sqrMagnitude;
-        gun.shouldFire = distSq < shotDist * shotDist;
-        if (distSq > chaseDist * chaseDist)
+        if (distSq > chaseDistSq)
         {
             motor.dir = diff.normalized;
         }
@@ -43,17 +44,8 @@ public class ShooterController : MonoBehaviour
         {
             motor.dir *= 0.9f;
         }
+        gun.shouldFire = distSq < shotDist * shotDist;
         motor.lookDir = diff;
     }
-    void OnTriggerEnter(Collider c)
-    {
-        ExplosionController explosion = c.GetComponentInParent<ExplosionController>();
-        BulletController bullet = c.GetComponentInParent<BulletController>();
-        if (explosion == null && bullet == null) return;
 
-        gameObject.SetActive(false);
-        MultiplierSpawner.SpawnMultipliers(gameObject.transform.position);
-        GameManager.ScorePoints(transform.position);
-        AudioManager.Play("Pew");
-    }
 }

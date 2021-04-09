@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float fireDelay = 0.5f;
     public float bulletSpeed = 40;
     float lastFire;
+    public ParticleSystem deathExplosion;
+    public GameObject playerVisuals;
 
     void Awake()
     {
@@ -30,8 +32,6 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw(xAxisLeft);
         float z = Input.GetAxisRaw(yAxisLeft);
         motor.dir = new Vector3(x,0,z).normalized;
-        if (Input.GetButtonDown("Cancel")) SceneManager.LoadScene("MainMenu");
-
         if (xAxisLeft != xAxisRight) UpdateRightStick();
     }
 
@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        SceneManager.LoadScene("MainMenu");
+        motor.enabled = false;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<SphereCollider>().enabled = false;
+        deathExplosion.Play();
+        GameManager.Death();
     }
 }

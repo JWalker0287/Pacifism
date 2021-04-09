@@ -190,12 +190,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit
-
-'
+  m_Text: QUIT
 --- !u!222 &83863598
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -390,7 +388,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4762a5259a1b7d74d8a3eba3a9e326c4, type: 3}
-    m_FontSize: 40
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -401,7 +399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Play Pacifism
+  m_Text: 'PLAY PACIFISM
 
 '
 --- !u!222 &296747348
@@ -541,8 +539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -170.29999, y: 250.29999}
-  m_SizeDelta: {x: 315.07, y: 62.20999}
+  m_AnchoredPosition: {x: -197.21002, y: 250.29999}
+  m_SizeDelta: {x: 368.88, y: 62.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697563721
 MonoBehaviour:
@@ -770,8 +768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -170.29999, y: 182.58002}
-  m_SizeDelta: {x: 315.07, y: 62.20999}
+  m_AnchoredPosition: {x: -197.21002, y: 182.58002}
+  m_SizeDelta: {x: 368.88, y: 62.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089915536
 MonoBehaviour:
@@ -1150,8 +1148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -170.29999, y: 78.51001}
-  m_SizeDelta: {x: 315.07, y: 137.68}
+  m_AnchoredPosition: {x: -197.21002, y: 78.51001}
+  m_SizeDelta: {x: 368.88, y: 137.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759049286
 MonoBehaviour:
@@ -1328,6 +1326,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779028655}
   m_CullTransparentMesh: 1
+--- !u!1001 &1848843886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 265226138989359265, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364490775551795463, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: c004f4c63b9124e47a317c3b38e0cb07, type: 3}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.529818
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.8305492
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.036344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
 --- !u!1 &1957766688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1487,7 @@ Transform:
   m_Children:
   - {fileID: 1011182987}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2031850645
 PrefabInstance:
@@ -1558,7 +1617,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4762a5259a1b7d74d8a3eba3a9e326c4, type: 3}
-    m_FontSize: 40
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -1566,10 +1625,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Play Shooter
+  m_Text: 'PLAY SHOOTER
 
 '
 --- !u!222 &2057671670
@@ -6382,5 +6441,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -0.048, y: -0.084, z: 90}
