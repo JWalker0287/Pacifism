@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -85,6 +86,8 @@ public class GameManager : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
+            Button selectedButton = GetComponentInChildren<Button>();
+            EventSystem.current.SetSelectedGameObject(selectedButton.gameObject);
         }
     }
     public void Quit()

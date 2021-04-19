@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuController : MonoBehaviour
 {
@@ -18,5 +20,11 @@ public class MenuController : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    void Awake()
+    {
+        Button selectedButton = GetComponentInChildren<Button>();
+        EventSystem.current.SetSelectedGameObject(selectedButton.gameObject);
     }
 }

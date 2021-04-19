@@ -586,7 +586,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: ff7805101b5668143b86348fb5ce351d, type: 3}
     - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4539671474453150929, guid: f3b4d144acbc7704a8b4c07f6fb24890, type: 3}
       propertyPath: m_LocalPosition.x
@@ -908,10 +908,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0, g: 0.25434065, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.09606767, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.4182589, g: 1, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.12484455, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.8977728, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1331,7 +1331,7 @@ RectTransform:
   - {fileID: 174435962}
   - {fileID: 609996638}
   - {fileID: 1736970474}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2023561671}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1399,10 +1399,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0, g: 0.25434065, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.09606767, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.4182589, g: 1, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.12484455, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.8977728, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1808,12 +1808,17 @@ Transform:
   - {fileID: 1163238611}
   - {fileID: 972724012}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1357079563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6201737693829615012, guid: fe8b0c8a2df5cd1409ba24bc6bb59902, type: 3}
   m_PrefabInstance: {fileID: 3854379803604211179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1437913180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 15883372541542760, guid: 2adcab9a7976fd1478c3d1fc0a21eb8b, type: 3}
+  m_PrefabInstance: {fileID: 3210362377283372399}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1497779679 stripped
 GameObject:
@@ -2009,10 +2014,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0, g: 0.25434065, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.09606767, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.4182589, g: 1, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2057,7 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.12484455, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.8977728, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2146,7 +2151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2023561669
 GameObject:
@@ -2205,6 +2210,7 @@ Transform:
   - {fileID: 1693052910}
   - {fileID: 1116268593}
   - {fileID: 230387880}
+  - {fileID: 1005407086}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2356,6 +2362,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033694272}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!198 &2086911167 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 367020604284159599, guid: 2adcab9a7976fd1478c3d1fc0a21eb8b, type: 3}
+  m_PrefabInstance: {fileID: 3210362377283372399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &655966357739448801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2492,6 +2503,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3210362377434889679, guid: 2adcab9a7976fd1478c3d1fc0a21eb8b, type: 3}
+      propertyPath: playerVisuals
+      value: 
+      objectReference: {fileID: 1437913180}
+    - target: {fileID: 3210362377434889679, guid: 2adcab9a7976fd1478c3d1fc0a21eb8b, type: 3}
+      propertyPath: deathExplosion
+      value: 
+      objectReference: {fileID: 2086911167}
     - target: {fileID: 3210362377434889712, guid: 2adcab9a7976fd1478c3d1fc0a21eb8b, type: 3}
       propertyPath: m_Name
       value: Player
